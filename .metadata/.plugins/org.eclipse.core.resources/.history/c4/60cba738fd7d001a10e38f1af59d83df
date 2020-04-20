@@ -1,0 +1,14 @@
+package com.ict.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class HelloTest01_T2 {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

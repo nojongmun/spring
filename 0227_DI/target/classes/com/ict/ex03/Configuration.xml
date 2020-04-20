@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- MyProcess process = new MyProcess(); -->
+	<bean id="process" class="com.ict.ex03.MyProcess" />
+	
+	<!-- 생성자를 이용해서 데이터 입력 -->
+	<bean id="process2" class="com.ict.ex03.MyProcess">
+		<constructor-arg name="name" value="둘리" />
+		<!-- <constructor-arg name="name"><value>둘리</value></constructor-arg> -->
+		<constructor-arg name="age" value="1004" />
+	</bean>
+	
+	<!-- setter를 이용해서 데이터 입력 -->
+	<bean id="process3" class="com.ict.ex03.MyProcess2">
+		<property name="name" value="태권브이" />
+		<property name="age" value="26" />
+	</bean>
+</beans>

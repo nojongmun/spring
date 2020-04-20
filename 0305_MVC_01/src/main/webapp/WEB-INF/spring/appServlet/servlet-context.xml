@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+	<!-- 1. HandlerMapping : 요청(request)오면 어떤 컨트롤러로 지정할 지 설정해 줌-->
+	<beans:bean name="/index.do" class="com.ict.controller.IndexController" />
+	<beans:bean name="/start.do" class="com.ict.controller.StartController" />
+	
+	<!-- 2. ViewResolver : 1에서 리턴한 정보(viewname)를 가지고 뷰페이지(jsp)의 위치를 완성한다. -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+</beans:beans>

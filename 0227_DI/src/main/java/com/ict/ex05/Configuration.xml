@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mp" class="com.ict.ex05.MapPrint">
+		<!--setter를 이용해서 데이터 삽입  -->
+		<property name="map1">
+			<map>
+				<entry>
+					<key><value>id</value></key>
+					<value>kkkk</value>
+				</entry>
+				<entry>
+					<key><value>pw</value></key>
+					<value>k1234</value>
+				</entry>
+				<entry>
+					<key><value>name</value></key>
+					<value>태권브이</value>
+				</entry>
+				<entry>
+					<key><value>age</value></key>
+					<value>37</value>
+				</entry>
+				<entry>
+					<key><value>addr</value></key>
+					<value>국회의사당</value>
+				</entry>
+			</map>
+		</property>
+		<property name="map2">
+			<map>
+				<entry>
+					<key><value>1001</value></key>
+					<value>아라치</value>
+				</entry>
+				<entry>
+					<key><value>1002</value></key>
+					<value>마루치</value>
+				</entry>
+				<entry>
+					<key><value>1003</value></key>
+					<value>태권브이</value>
+				</entry>
+				<entry>
+					<key><value>1004</value></key>
+					<value>아수라백작</value>
+				</entry>
+				<entry>
+					<key><value>1005</value></key>
+					<value>메칸더</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

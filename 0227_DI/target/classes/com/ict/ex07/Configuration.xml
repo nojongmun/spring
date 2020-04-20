@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+   <!-- 어노테이션 : xml에서 지정해서 처리한 방법을 
+                  자바코드에서 지정해서 처리 할 수 있도록 만들어 놓은 방법
+        1. Namespaces에서 context 추가
+        2. <context:annotation-confing /> 추가
+        3. <context:component-scan base-package ="어노테이션할 파일들의 위치지정" />
+        4. 해당 자바 클래스 위에 어노테이션 하면 된다.
+        
+        @Componet : 가장 상위 클래스로 **일반클래스를 객체로 만들 때 사용
+        @Service : 보통 비즈니스 로직 클래스를 객체로 만들 때 사용
+        @Repository : 데이터베이스에 연동처리하는 DAO 클래스를 객체로 만들때 사용
+        @Controller : MVC 패턴에서 컨트롤러 클래스을 객체로 만들 때 사용
+    -->
+	
+	<context:annotation-config />
+    <context:component-scan base-package="com.ict.ex07" />
+     
+    <!-- <bean id="dao" class="com.ict.ex07.MySqlDAO" /> -->
+    <!-- <bean id="dao1" class="com.ict.ex07.OracleDAO" /> -->
+
+	<!-- Autowired : 변수이름과 참조하는 id 가 같으면 생략 가능 -->
+    <!-- <bean id ="service" class="com.ict.ex07.Service" autowire="byName" /> -->
+    	
+    	
+</beans>

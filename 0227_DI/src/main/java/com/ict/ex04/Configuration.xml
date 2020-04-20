@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- setter를 이용해서 데이터 삽입 -->
+	<bean id="ap" class="com.ict.ex04.ArrayPrint">
+		<!-- 배열처리 : list , 숫자형 자료는 알아서 처리  -->
+		<property name="arr1">
+		  	<list>
+		  		<value>1000</value>
+		  		<value>2000</value>
+		  		<value>3000</value>
+		  		<value>4000</value>
+		  	</list>
+		</property>	
+		<property name="arr2">
+		  	<list>
+		  		<value>1000</value>
+		  		<value>2000</value>
+		  		<value>3000</value>
+		  		<value>4000</value>
+		  	</list>
+		</property>	
+		
+	</bean>
+</beans>

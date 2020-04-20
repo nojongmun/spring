@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ict.service.mapper">
+	
+	<!-- 리스트 -->
+	<select id="list" parameterType="String" resultType="vo">
+		select * from shop_t where category = #{category}
+	</select>
+	
+	<!-- 로그인 -->
+	<select id="login" parameterType="mvo" resultType="mvo">
+		select * from members where id = #{id} and pw = #{pw}
+	</select>
+	
+	<!-- 상품 상세보기 -->
+	<select id="onelist" parameterType="String" resultType="vo">
+		select * from shop_t where idx = #{idx}
+	</select>
+	
+	<!-- id로 카트 검색  -->
+	<select id="cartlist" parameterType="String" resultType="cvo">
+		select * from cart where id = #{id}
+	</select>
+	
+	<!-- id, p_num 카트 검색 -->
+	<select id="p_cartlist" parameterType="Map" resultType="cvo">
+		select * from cart where id=#{id} and p_num = #{p_num}
+	</select>
+	
+	<!-- 카트에  정보 삽입  -->
+	<insert id="cartInsert" parameterType="cvo">
+		insert into cart values(cart_seq.nextval,#{p_num},#{p_name},#{p_price},1,#{id})
+	</insert>
+	
+	<!-- id와 p_num가 같은 조건이 갯수 1증가 시키자  -->
+	<update id="cartupdate" parameterType="cvo">
+		update cart set p_su=p_su+1 where id=#{id} and p_num=#{p_num} 
+	</update>
+	
+	<!-- cart갯수 수정 -->
+	<update id="cartedit" parameterType="cvo">
+		update cart set p_su=#{p_su} where id=#{id} and p_num=#{p_num}
+	</update>
+	
+	<!-- cart 제품 삭제 -->
+	<delete id="cartdelete" parameterType="cvo">
+		delete from cart where id=#{id} and p_num=#{p_num}
+	</delete>
+	
+	<!-- 제품 추가 -->
+	<insert id="p_insert" parameterType="vo">
+		insert into shop_t values(shop_seq.nextval, #{category}, #{p_num},
+		#{p_name}, #{p_company},#{p_price}, #{p_saleprice},#{p_image_s},
+		#{p_image_l}, #{p_content}, sysdate)
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+

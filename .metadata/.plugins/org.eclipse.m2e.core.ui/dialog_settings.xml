@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="0305_AOP"/>
+			<item value="0304_Web_GuestBook"/>
+			<item value="0303_Web_MyBatis"/>
+			<item value="0302_Web_JDBC2"/>
+			<item value="0302_Web_JDBC"/>
+			<item value="0302_Web_DI2"/>
+			<item value="0302_Web_DI1"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="0305_AOP"/>
+			<item value="0304_Web_GuestBook"/>
+			<item value="0303_Web_MyBatis"/>
+			<item value="0302_Web_JDBC2"/>
+			<item value="0302_Web_JDBC"/>
+			<item value="0302_Web_DI2"/>
+			<item value="0302_Web_DI1"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

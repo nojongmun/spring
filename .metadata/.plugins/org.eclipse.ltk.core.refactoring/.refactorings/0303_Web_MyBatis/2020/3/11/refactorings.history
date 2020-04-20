@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;0312_MVC_MyBatis/src/main/java/com.ict.service&apos;&#x0D;&#x0A;- Original project: &apos;0303_Web_MyBatis&apos;&#x0D;&#x0A;- Destination element: &apos;0312_MVC_MyBatis/src/main/java/com.ict.service&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.ict.db.VO.java&#x0D;&#x0A;     com.ict.db.DAO.java&#x0D;&#x0A;     mapper.xml" description="Copy elements" destination="=0312_MVC_MyBatis/src\/main\/java&lt;com.ict.service" element1="src/com/ict/db/mapper.xml" element2="/src&lt;com.ict.db{VO.java" element3="/src&lt;com.ict.db{DAO.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1583974342280" units="2" version="1.0"/>
+</session>

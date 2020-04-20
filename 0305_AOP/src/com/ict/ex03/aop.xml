@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- AOP 실행방법 -->
+	<!-- 1. Namespaces에서 aop 추가 -->
+	<!-- 2. 관련 객체 생성 -->
+	<bean id="boy" class="com.ict.ex03.Boy" />
+	<bean id="gril" class="com.ict.ex03.Gril" />
+	<bean id="myAspect" class="com.ict.ex03.MyAspect" />
+	
+	<!-- 3. AOP 작성 -->
+	<aop:config>
+		<!-- 어느지점에서 실행할지 설정 : pointcut 중에서 joinpoint 설정 -->
+		<aop:pointcut expression="execution(* do*())" id="myPointCut"/>
+		<!-- 무엇을 언제 할지 지정 (DI 사용)  -->
+		<aop:aspect ref="myAspect">
+			<aop:before method="pre" pointcut-ref="myPointCut"/>
+    		<aop:after method="next" pointcut-ref="myPointCut"/>
+		</aop:aspect>	
+	</aop:config> 
+</beans>
